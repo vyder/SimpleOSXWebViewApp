@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "InteractionEventListenerProtocol.h"
 
-@interface MainViewController : NSViewController
+@interface MainViewController : NSViewController <InteractionEventListenerProtocol>
 
+- (instancetype)initWithFrame:(NSRect)frame;
 
 @end
 

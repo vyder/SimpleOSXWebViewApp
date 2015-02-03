@@ -1,5 +1,5 @@
 //
-//  MainWindow.h
+//  MainWindowController.h
 //  SimpleOSXWebView
 //
 //  Created by Vidur Murali on 2/3/15.
@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MainWindow : NSWindow
-
-@property (strong, nonatomic) id eventDelegate;
+@interface MainWindowController : NSWindowController
 
 @end

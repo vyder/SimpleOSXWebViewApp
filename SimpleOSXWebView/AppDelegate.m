@@ -8,16 +8,28 @@
 
 #import "AppDelegate.h"
 
+// Common
+//#import "InteractionsBus.h"
+
+// Main Window
+#import "MainWindow.h"
+#import "MainWindowController.h"
+#import "MainViewController.h"
+
+
 @interface AppDelegate ()
 
-@property (strong, nonatomic) IBOutlet NSWindowController *mainWindowController;
+@property (strong, nonatomic) MainWindowController *mainWindowController;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.mainWindowController = [[NSWindowController alloc] initWithWindowNibName:@"MainWindow"];
+    // Create the MainWindow and MainViewController, and hook them up
+    self.mainWindowController = [[MainWindowController alloc] initWithWindowNibName:@"MainWindow"];
+    
+    // Make the MainWindow visible
     [self.mainWindowController showWindow:nil];
 }
 

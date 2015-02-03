@@ -10,4 +10,22 @@
 
 @implementation MainWindow
 
+// Dispatches mouse and keyboard events sent to the window by the NSApplication object
+- (void)sendEvent:(NSEvent *)theEvent {
+    if( self.eventDelegate != nil ) {
+        [self.eventDelegate sendEvent:theEvent];
+    }
+    
+    // Let the event bubble up
+    [super sendEvent:theEvent];
+}
+
+- (BOOL)canBecomeKeyWindow {
+    return YES;
+}
+
+- (BOOL)acceptsFirstResponder {
+    return YES;
+}
+
 @end
