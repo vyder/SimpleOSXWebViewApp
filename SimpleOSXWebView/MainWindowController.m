@@ -34,15 +34,11 @@
     [super windowDidLoad];
     
     // Figure out the size of the content space in this window
-    NSRect windowFrame = self.window.frame;
     NSRect contentViewFrame = ((NSView *)self.window.contentView).frame;
-    
-    CGFloat titleBarHeight = windowFrame.size.height - contentViewFrame.size.height;
-    
     NSRect viewFrame = NSMakeRect(contentViewFrame.origin.x,
-                                 (contentViewFrame.origin.y - titleBarHeight),
+                                  contentViewFrame.origin.y,
                                   contentViewFrame.size.width,
-                                 (contentViewFrame.size.height - titleBarHeight));
+                                  contentViewFrame.size.height);
     
     // Create a MainViewController and add it to the MainWindow
     self.mainViewController = [[MainViewController alloc] initWithFrame:viewFrame];

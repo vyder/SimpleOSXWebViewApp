@@ -29,11 +29,9 @@
 - (void)loadView {
     // Create parent view
     self.view = [[NSView alloc] initWithFrame:self.frame];
-    [self.view setFrameOrigin:NSMakePoint(0.0, 0.0)];
     
     // Create WebView and add it to the parent view
     self.webView = [[WebView alloc] initWithFrame:self.frame];
-    [self.webView setFrameOrigin:NSMakePoint(0.0, 0.0)];
     [self.view addSubview:self.webView];
 }
 
