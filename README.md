@@ -2,6 +2,10 @@
 
 A simple OSX App that creates a WebView inside a regular window.
 
+![Regular Window](assets/regular_window.png)
+
+![Scrolling Window](assets/scrolling_window.png)
+
 Additionally, this project also includes a component to help you handle interaction events that occur on that window, e.g. keyboard input, mouse gestures.
 
 For example:
