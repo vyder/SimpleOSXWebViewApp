@@ -10,12 +10,15 @@
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) IBOutlet NSWindowController *mainWindowController;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    self.mainWindowController = [[NSWindowController alloc] initWithWindowNibName:@"MainWindow"];
+    [self.mainWindowController showWindow:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
