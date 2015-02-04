@@ -11,4 +11,6 @@
 
 @interface BorderlessWindow : NSWindow <SimpleWindowProtocol>
 
+@property NSPoint currentWindowPosition;
+
 @end
