@@ -11,8 +11,9 @@
 // Common
 //#import "InteractionsBus.h"
 
-// Main Window
+// Window components
 #import "RegularWindow.h"
+#import "BorderlessWindow.h"
 #import "PrimaryWindowController.h"
 #import "PrimaryViewController.h"
 
@@ -32,7 +33,10 @@
     //       play around with the code
     
     // Create a RegularWindow
-    RegularWindow *primaryWindow = [[RegularWindow alloc] init];
+//    RegularWindow *primaryWindow = [[RegularWindow alloc] init];
+    
+    // Create a BorderlessWindow
+    BorderlessWindow *primaryWindow = [[BorderlessWindow alloc] init];
 
     // Create the MainWindow and MainViewController, and hook them up
     self.primaryWindowController = [[PrimaryWindowController alloc] initWithWindow:primaryWindow];

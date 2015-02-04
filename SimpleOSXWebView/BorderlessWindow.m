@@ -22,6 +22,7 @@
                                 styleMask:NSBorderlessWindowMask
                                   backing:NSBackingStoreBuffered
                                     defer:YES] ) {
+        [self setHasShadow:YES];
         return self;
     }
     return nil;
