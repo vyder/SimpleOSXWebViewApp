@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MainWindow : NSWindow
+@interface RegularWindow : NSWindow
 
 @property (strong, nonatomic) id eventDelegate;
+
+- (instancetype)init;
+- (instancetype)initWithContentRect:(NSRect)frame;
 
 @end

@@ -7,9 +7,9 @@
 //
 
 @import WebKit;
-#import "MainViewController.h"
+#import "PrimaryViewController.h"
 
-@interface MainViewController ()
+@interface PrimaryViewController ()
 
 @property NSRect frame;
 @property (strong, nonatomic) WebView *webView;
@@ -17,9 +17,9 @@
 
 @end
 
-@implementation MainViewController
+@implementation PrimaryViewController
 
-- (instancetype)initWithFrame:(NSRect)frame {
+- (instancetype)initWithContentFrame:(NSRect)frame {
     self = [super init];
     if( self ) {
         self.frame = frame;

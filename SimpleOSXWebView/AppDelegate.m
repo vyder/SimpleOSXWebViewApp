@@ -12,29 +12,44 @@
 //#import "InteractionsBus.h"
 
 // Main Window
-#import "MainWindow.h"
-#import "MainWindowController.h"
-#import "MainViewController.h"
+#import "RegularWindow.h"
+#import "PrimaryWindowController.h"
+#import "PrimaryViewController.h"
 
 
 @interface AppDelegate ()
 
-@property (strong, nonatomic) MainWindowController *mainWindowController;
+@property (strong, nonatomic) PrimaryWindowController *primaryWindowController;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Create the MainWindow and MainViewController, and hook them up
-    self.mainWindowController = [[MainWindowController alloc] initWithWindowNibName:@"MainWindow"];
+
+    // Note: NSWindow creation process can (should?) be owned by the NSWindowController,
+    //       but I've put it here so it's easy to swap out the various Window types to
+    //       play around with the code
     
-    // Make the MainWindow visible
-    [self.mainWindowController showWindow:nil];
+    // Create a RegularWindow
+    RegularWindow *primaryWindow = [[RegularWindow alloc] init];
+
+    // Create the MainWindow and MainViewController, and hook them up
+    self.primaryWindowController = [[PrimaryWindowController alloc] initWithWindow:primaryWindow];
+    [self.primaryWindowController.window setTitle:@"SimpleOSXWebViewApp"];
+    [self.primaryWindowController.window center];
+    
+    // Make the primary window visible
+    [self.primaryWindowController showWindow:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+// Quit the app if the priamry window is closed
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)app {
+    return YES;
 }
 
 @end
