@@ -1,19 +1,24 @@
 //
-//  InteractionsBus.h
+//  EventBus.h
 //  SimpleOSXWebView
 //
-//  Created by Vidur Murali on 2/3/15.
+//  Created by Vidur Murali on 2/4/15.
 //  Copyright (c) 2015 Vidur Murali. All rights reserved.
 //
 
 #import "Cocoa/Cocoa.h"
 #import <Foundation/Foundation.h>
 
-#import "InteractionEventListenerProtocol.h"
+#import "EventListenerProtocol.h"
 
-@interface InteractionsBus : NSObject
+@interface EventBus : NSObject
 
 @property (strong, nonatomic) NSMutableArray *listeners;
+@property (strong, nonatomic) Protocol *listenerProtocol;
+@property (nonatomic) SEL protocolSelector;
+
+- (instancetype)init;
+- (instancetype)initWithListenerProtocol:(Protocol *)listenerProtocol andSelector:(SEL)protocolSelector;
 
 - (void)sendEvent:(NSEvent *)theEvent;
 

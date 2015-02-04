@@ -11,12 +11,13 @@
 #import "MainViewController.h"
 
 // Common Library
-#import "InteractionsBus.h"
+#import "EventBus.h"
+#import "InteractionEventListenerProtocol.h"
 
 @interface MainWindowController ()
 
 @property (strong, nonatomic) MainViewController *mainViewController;
-@property (strong, nonatomic) InteractionsBus *interactionsBus;
+@property (strong, nonatomic) EventBus *interactionsBus;
 
 @end
 
@@ -25,7 +26,7 @@
 - (instancetype)initWithWindowNibName:(NSString *)windowNibName {
     self = [super initWithWindowNibName:windowNibName];
     if( self ) {
-        self.interactionsBus = [[InteractionsBus alloc] init];
+        self.interactionsBus = [[EventBus alloc] initWithListenerProtocol:@protocol(InteractionEventListenerProtocol) andSelector:@selector(onInteractionEvent:)];
     }
     return self;
 }
