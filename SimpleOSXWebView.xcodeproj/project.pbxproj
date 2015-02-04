@@ -16,6 +16,7 @@
 		039B87361A81157D007C9E31 /* PrimaryWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039B87351A81157D007C9E31 /* PrimaryWindowController.m */; };
 		039B87731A81F27E007C9E31 /* EventBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 039B87721A81F27E007C9E31 /* EventBus.m */; };
 		03BC14C01A821CC10052CE47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039B87101A80FD80007C9E31 /* Main.storyboard */; };
+		03BC14C51A821FFC0052CE47 /* BorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BC14C41A821FFC0052CE47 /* BorderlessWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,9 @@
 		039B87711A81F27E007C9E31 /* EventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventBus.h; sourceTree = "<group>"; };
 		039B87721A81F27E007C9E31 /* EventBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBus.m; sourceTree = "<group>"; };
 		03BC14C21A821D780052CE47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		03BC14C31A821FFC0052CE47 /* BorderlessWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderlessWindow.h; sourceTree = "<group>"; };
+		03BC14C41A821FFC0052CE47 /* BorderlessWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderlessWindow.m; sourceTree = "<group>"; };
+		03BC14C61A8220440052CE47 /* SimpleWindowProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWindowProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +158,11 @@
 		039B87741A8217BA007C9E31 /* WindowLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				03BC14C61A8220440052CE47 /* SimpleWindowProtocol.h */,
 				039B87291A8108D3007C9E31 /* RegularWindow.h */,
 				039B872A1A8108D3007C9E31 /* RegularWindow.m */,
+				03BC14C31A821FFC0052CE47 /* BorderlessWindow.h */,
+				03BC14C41A821FFC0052CE47 /* BorderlessWindow.m */,
 			);
 			name = WindowLibrary;
 			sourceTree = "<group>";
@@ -262,6 +269,7 @@
 				039B87361A81157D007C9E31 /* PrimaryWindowController.m in Sources */,
 				039B872B1A8108D3007C9E31 /* RegularWindow.m in Sources */,
 				039B870D1A80FD80007C9E31 /* PrimaryViewController.m in Sources */,
+				03BC14C51A821FFC0052CE47 /* BorderlessWindow.m in Sources */,
 				039B870A1A80FD80007C9E31 /* main.m in Sources */,
 				039B87731A81F27E007C9E31 /* EventBus.m in Sources */,
 				039B87081A80FD80007C9E31 /* AppDelegate.m in Sources */,

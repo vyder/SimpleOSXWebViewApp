@@ -1,14 +1,14 @@
 //
-//  MainWindow.m
+//  BorderlessWindow.m
 //  SimpleOSXWebView
 //
-//  Created by Vidur Murali on 2/3/15.
+//  Created by Vidur Murali on 2/4/15.
 //  Copyright (c) 2015 Vidur Murali. All rights reserved.
 //
 
-#import "RegularWindow.h"
+#import "BorderlessWindow.h"
 
-@implementation RegularWindow
+@implementation BorderlessWindow
 
 @synthesize eventDelegate;
 
@@ -19,7 +19,7 @@
 
 - (instancetype)initWithContentRect:(NSRect)frame {
     if (self = [super initWithContentRect:frame
-                                styleMask:NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask
+                                styleMask:NSBorderlessWindowMask
                                   backing:NSBackingStoreBuffered
                                     defer:YES] ) {
         return self;
@@ -46,3 +46,4 @@
 }
 
 @end
+
